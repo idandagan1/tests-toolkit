@@ -1,0 +1,14 @@
+{
+    "name": "tests-toolkit",
+    "version": "1.0.0",
+    "description": "a simple toolkit for creating tests files",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Idan Dagan",
+    "license": "ISC",
+    "dependencies": {
+    }
+  }
+  

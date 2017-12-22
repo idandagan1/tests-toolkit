@@ -1,6 +1,6 @@
 {
   "name": "tests-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "a simple toolkit for creating tests files",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,10 @@
   "dependencies": {
     "chai": "^4.1.2",
     "fs-extra": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idandagan1/tests-toolkit"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",

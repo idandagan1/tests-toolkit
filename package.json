@@ -1,6 +1,6 @@
 {
   "name": "tests-toolkit",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "a simple toolkit for creating tests files",
   "main": "index.js",
   "scripts": {

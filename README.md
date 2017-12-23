@@ -7,14 +7,9 @@ Creation
     npm i tests-toolkit -D
     
 ### This command will do the following:
-<<<<<<< HEAD
-- create a tests directory under root
+- create a tests directory under root folder
 - create a test template
 
 #### Keep in mind
-- This module require latest version of node (v9).
+- This module requires the latest version of node (v9).
 - If you already have a test folder, this command will override it.
-=======
-- create a tests directory in root
-- create a test template
->>>>>>> origin/master

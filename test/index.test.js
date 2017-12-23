@@ -9,7 +9,7 @@ describe('Test files', () => {
             assert.doesNotThrow(async () => {
                 console.log('copying files...');
                 await copyTestsDir();
-            }, 'Did not throw an error')
+            }, 'Did not throw an error');
         });
     });
 

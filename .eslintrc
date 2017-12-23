@@ -1,5 +1,4 @@
 {
-    "parser": "babel-eslint",
     "extends": "airbnb",
     "rules": {
       "padded-blocks": 0,
@@ -16,18 +15,8 @@
       "curly": [2, "multi-line", "consistent"],
       "new-cap": 1,
       "dot-notation": 1,
-      "react/jsx-boolean-value": [2, "always"],
-      "react/jsx-indent-props": 0,
-      "react/prop-types": [2, {"ignore": ["dispatch"]} ],
-      "react/sort-comp": 1,
-      "react/no-did-mount-set-state": 1,
-      "react/jsx-filename-extension": 0,
       "object-curly-spacing": [2, "always"],
-      "no-unused-expressions": 1,
-      "max-len": [1, 120, 4],
-      "import/no-extraneous-dependencies": 0,
-      "react/jsx-indent": [2, 4],
-      "import/no-unresolved": 0
+      "no-unused-expressions": 1
     },
     "ecmaFeatures": {
       "experimentalObjecRestSpread": true

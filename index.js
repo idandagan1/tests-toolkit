@@ -2,18 +2,18 @@ const fs = require('fs-extra');
 const path = require('path');
 const { exec } = require('child_process');
 
-const destPath = process.env.DEST_PATH || path.resolve(__dirname, '../../tests');
-const toInstlChai = process.env.CHAI !== 'false';
+const idProd = process.env.PROD !== 'false';
+const destPath = path.resolve(__dirname, `${idProd ? '../../tests' : './tests'}`);
 
-if (toInstlChai) {
-    installChai(copyTestsDir);
-} else {
+if (idProd) {
     copyTestsDir();
+} else {
+    installChai(copyTestsDir);
 }
 
 function installChai(cb) {
     // installing chai package
-    exec('npm i chai -D', (err, t, u) => {
+    exec('npm i chai -D', (err) => {
         if (err) throw err;
         console.log('installed chai successfully');
         cb();

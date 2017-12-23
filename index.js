@@ -12,8 +12,8 @@ exec('npm i chai -S', (err, t, u) => {
 function copyTestsDir() {
     // Copying the tests directory
     try {
-        fs.copy(path.resolve(__dirname, './tests'), './tests');
-        console.log('success!');
+        fs.copy(path.resolve(__dirname, './src'), path.resolve(__dirname, '../../tests'));
+        console.log('created tests directory successfully');
     } catch (err) {
         console.error(err);
     }

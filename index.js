@@ -20,13 +20,11 @@ function installChai(cb) {
     });
 }
 
-async function copyTestsDir(cb) {
+async function copyTestsDir() {
     // Copying the tests directory
     try {
         await fs.copy(path.resolve(__dirname, './src'), destPath);
-        const msg = 'created tests directory successfully';
-        console.log(msg);
-        return msg;
+        console.log('created tests directory successfully');
     } catch (err) {
         console.error(err);
     }

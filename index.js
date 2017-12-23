@@ -2,19 +2,34 @@ const fs = require('fs-extra');
 const path = require('path');
 const { exec } = require('child_process');
 
-// installing chai package
-exec('npm i chai -S', (err, t, u) => {
-    if (err) throw err;
-    console.log('installed chai successfully');
-    copyTestsDir();
-});
+const destPath = process.env.DEST_PATH || path.resolve(__dirname, '../../tests');
+const toInstlChai = process.env.CHAI !== 'false';
 
-function copyTestsDir() {
+if (toInstlChai) {
+    installChai(copyTestsDir);
+} else {
+    copyTestsDir();
+}
+
+function installChai(cb) {
+    // installing chai package
+    exec('npm i chai -D', (err, t, u) => {
+        if (err) throw err;
+        console.log('installed chai successfully');
+        cb();
+    });
+}
+
+async function copyTestsDir(cb) {
     // Copying the tests directory
     try {
-        fs.copy(path.resolve(__dirname, './src'), path.resolve(__dirname, '../../tests'));
-        console.log('created tests directory successfully');
+        await fs.copy(path.resolve(__dirname, './src'), destPath);
+        const msg = 'created tests directory successfully';
+        console.log(msg);
+        return msg;
     } catch (err) {
         console.error(err);
     }
 }
+
+module.exports.copyTestsDir = copyTestsDir;

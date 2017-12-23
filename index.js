@@ -2,10 +2,10 @@ const fs = require('fs-extra');
 const path = require('path');
 const { exec } = require('child_process');
 
-const idProd = process.env.PROD !== 'false';
-const destPath = path.resolve(__dirname, `${idProd ? '../../tests' : './tests'}`);
+const isProd = process.env.PROD !== 'false';
+const destPath = path.resolve(__dirname, `${isProd ? '../../tests' : './tests'}`);
 
-if (idProd) {
+if (isProd) {
     copyTestsDir();
 } else {
     installChai(copyTestsDir);

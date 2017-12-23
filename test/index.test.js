@@ -8,8 +8,7 @@ describe('Test files', () => {
         it('should created test directory', async () => {
             assert.doesNotThrow(async () => {
                 console.log('copying files...');
-                const msg = await copyTestsDir();
-                console.log('after');
+                await copyTestsDir();
             }, 'Did not throw an error')
         });
     });

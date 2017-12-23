@@ -6,9 +6,11 @@ describe('Test files', () => {
 
     describe('copying the files', () => {
         it('should created test directory', async () => {
-            console.log('copying files...');
-            const msg = await copyTestsDir();
-            assert.equal(msg, 'created tests directory successfully');
+            assert.doesNotThrow(async () => {
+                console.log('copying files...');
+                const msg = await copyTestsDir();
+                console.log('after');
+            }, 'Did not throw an error')
         });
     });
 
